@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle, #000010, #000000);
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+  background: black;
+  border: 2px solid cyan;
+  box-shadow: 0 0 20px cyan;
+}
+
+.screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.9);
+}
+
+.hidden { display: none; }
+
+.title {
+  font-size: 3em;
+  color: cyan;
+  text-shadow: 0 0 20px cyan, 0 0 40px magenta;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: violet;
+}
+
+button {
+  margin: 10px;
+  padding: 12px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background: cyan;
+  color: black;
+  transition: transform 0.2s, background 0.2s;
+}
+button:hover { transform: scale(1.1); background: magenta; }
+
+#hud {
+  position: absolute;
+  top: 10px; left: 10px;
+  text-align: left;
+}
+
+#shieldIndicator {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+#shieldIcon {
+  font-size: 1.5em;
+  margin-right: 5px;
+  text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+}
+
+#shieldTimerBar {
+  width: 100px;
+  height: 10px;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid cyan;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+#shieldTimerBar::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 0%;
+  height: 100%;
+  background: cyan;
+  box-shadow: 0 0 10px cyan, 0 0 20px cyan;
+  transition: width 0.1s linear;
+}
+
+.victory {
+  font-size: 2.5em;
+  color: gold;
+  text-shadow: 0 0 20px orange, 0 0 40px red;
+}
+
+.victory-sub {
+  font-size: 1.5em;
+  margin: 20px 0;
+}
