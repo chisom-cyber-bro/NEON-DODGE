@@ -53,8 +53,7 @@ Mobile / iOS / Android — includes touch controls for full playability
 
 Clone the repo:
 
-git clone https://github.com/chisomcyberbro/neon-dodge.git
-cd neon-dodge
+git clone https://chisom-cyber-bro.github.io/NEON-DODGE/
 
 
 Open kelly.html in your browser.
