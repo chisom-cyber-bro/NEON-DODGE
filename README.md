@@ -53,7 +53,7 @@ Mobile / iOS / Android — includes touch controls for full playability
 
 Clone the repo:
 
-git clone [https://github.com/<your-username>/neon-dodge.git](https://github.com/chisom-cyber-bro/NEON-DODGE/edit/main/README.md)
+git clone https://github.com/chisomcyberbro/neon-dodge.git
 cd neon-dodge
 
 
