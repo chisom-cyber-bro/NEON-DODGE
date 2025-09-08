@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Neon Dodge</title>
+  <link rel="stylesheet" href="eroms.css" />
+</head>
+<body>
+  <!-- INTRO -->
+  <div id="intro" class="overlay">
+    <h1 class="neon-title">NEON DODGE</h1>
+    <p class="intro-text">
+      ⚡ Rules & Instructions ⚡<br>
+      • Collect all glowing orbs to clear a level.<br>
+      • Avoid moving neon blocks — they increase in speed & number each level.<br>
+      • Shields spawn on the map (5 per level). Collect one to activate 30s protection; used shields respawn after 60s.<br>
+      • Player speed stays constant; if you fail a level you restart at that same level.<br><br>
+      <strong>Created by Chisom Nzerem</strong>
+    </p>
+    <div class="intro-buttons">
+      <button id="startBtn">Start Game</button>
+      <button id="settingsBtn">Settings</button>
+    </div>
+    <p class="hint">You can also press <strong>Enter</strong> to start.</p>
+  </div>
+
+  <!-- SETTINGS -->
+  <div id="settings" class="overlay hidden">
+    <h2>Settings</h2>
+    <label>Music Volume
+      <input id="musicVol" type="range" min="0" max="1" step="0.05" value="0.5">
+    </label>
+    <label>SFX
+      <input id="sfxToggle" type="checkbox" checked>
+    </label>
+    <button id="settingsBack">Back</button>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud" class="hud hidden" aria-hidden="true">
+    <div id="levelLabel">Level: 1</div>
+    <div id="scoreLabel">Orbs: 0</div>
+    <div id="shieldInfo">
+      <div id="shieldCount">Shields: 5</div>
+      <div id="shieldBarWrap"><div id="shieldBar"></div></div>
+    </div>
+    <div id="rightControls">
+      <button id="pauseBtn">⏸ Pause</button>
+      <button id="resumeBtn" class="hidden">▶ Resume</button>
+      <button id="retryBtn">↻ Retry</button>
+      <button id="menuBtn">🏠 Menu</button>
+    </div>
+  </div>
+
+  <!-- Mobile Controls -->
+  <div id="mobileControls" class="mobile-controls hidden" aria-hidden="true">
+    <button id="btnUp">⬆️</button>
+    <div class="row">
+      <button id="btnLeft">⬅️</button>
+      <button id="btnDown">⬇️</button>
+      <button id="btnRight">➡️</button>
+    </div>
+  </div>
+
+  <!-- Game canvas -->
+  <canvas id="gameCanvas" tabindex="0" aria-label="Neon Dodge game canvas"></canvas>
+
+  <!-- Victory -->
+  <div id="victory" class="overlay hidden">
+    <h1 class="neon-title">🎉 CONGRATULATIONS YOU BEAT THE GAME 🎉</h1>
+    <p>You completed all 100 levels — incredible!</p>
+    <div>
+      <button id="playAgain">Play Again</button>
+      <button id="mainMenu">Main Menu</button>
+    </div>
+    <canvas id="confettiCanvas" class="confetti"></canvas>
+  </div>
+
+  <script src="jv.js"></script>
+</body>
+</html>
